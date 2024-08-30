@@ -1,0 +1,91 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 21rem; 
+    background-color: #fff;
+    padding: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.125rem 0 0.3125rem rgba(0, 0, 0, 0.1); 
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem; 
+}
+
+.company-logo {
+    width: 3.2rem; 
+    height: 3.2rem;
+    background-color: #b52a3a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    font-weight: bold;
+    margin-right: 1rem; 
+    font-size: 1.125rem; 
+}
+
+.company-name {
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu ul {
+    list-style-type: none; 
+}
+
+.menu ul li {
+    margin-bottom: 1.875rem; 
+}
+
+.menu ul li a, .bottom-menu a {
+    text-decoration: none;
+    color: #555;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    font-size: 1.1rem; 
+}
+
+.menu ul li a:hover, .bottom-menu a:hover {
+    color: #c05c68;
+}
+
+.menu ul li a i, .bottom-menu a i {
+    margin-right: 0.9375rem; /* 15px / 16px = 0.9375rem */
+    width: 1.5625rem; /* 25px / 16px = 1.5625rem */
+    text-align: center;
+    font-size: 1.125rem; 
+}
+
+.bottom-menu {
+    margin-top: auto;
+}
+
+.logout, .dark-mode {
+    margin-top: 1.25rem;
+}
+
