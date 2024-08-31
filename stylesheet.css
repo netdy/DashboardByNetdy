@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 .container {
@@ -25,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: 0.125rem 0 0.3125rem rgba(0, 0, 0, 0.1); 
+    z-index: 100;
 }
 
 .company {
