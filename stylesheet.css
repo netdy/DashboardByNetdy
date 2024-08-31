@@ -45,7 +45,7 @@ body {
 .company-logo {
     width: 3.2rem; 
     height: 3.2rem;
-    background-color: var(--pimary-color);
+    background-color: var(--primary-color);
     color: var(--background-color);
     display: flex;
     align-items: center;
