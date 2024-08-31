@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #b52a3a;
+    --secondary-color: #e3ffff;
+    --text-color: #333;
+    --background-color: #ffffff;
+    --sidebar-width: 21rem;
+}
+
 html {
     font-size: 18px;
 }
@@ -10,7 +18,7 @@ html {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 
 .container {
@@ -19,12 +27,12 @@ body {
 }
 
 .sidebar {
-    width: 21rem; 
-    background-color: #fff;
+    width: var(--sidebar-width);
+    background-color: var(--background-color);
     padding: 1.875rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0.125rem 0 0.3125rem rgba(0, 0, 0, 0.1); 
+    box-shadow: 0.125rem 0 0.3125rem rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
 
@@ -37,8 +45,8 @@ body {
 .company-logo {
     width: 3.2rem; 
     height: 3.2rem;
-    background-color: #b52a3a;
-    color: white;
+    background-color: var(--pimary-color);
+    color: var(--background-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,12 +103,12 @@ body {
 /*----- topbar -------*/
 
 .topbar {
-    width: calc(100vw - 21rem); 
-    background-color: #b52a3a;
+    width: calc(100vw - var(--sidebar-width));
+    background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1.875rem; 
+    padding: 0 1.875rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -126,8 +134,8 @@ body {
     font-family: Arial, sans-serif;
     max-width: 100vm;
     margin: 1.25rem auto;
-    padding: 1.25rem;
-    background-color: #ffffff;
+    padding: 1.25rem 2.5rem ;
+    background-color: var(--background-color);
 }
 
 .dashboard-title {
@@ -140,7 +148,7 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
-    color: #333;
+    color: var(--text-color);
 }
 
 .dashboard-title i {
@@ -155,7 +163,7 @@ body {
 }
 
 .dashboard-item {
-    background-color: #e3ffff;
+    background-color: var(--secondary-color);
     flex: 1;
     padding: 1.25rem;
     border-radius: 1.25rem;
@@ -177,7 +185,7 @@ body {
 
 .dashboard-item-value {
     font-size: 2.5rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 /*----- Recent Activity -------*/
@@ -186,8 +194,8 @@ body {
     font-family: Arial, sans-serif;
     max-width: 100vm;
     margin: 1.25rem auto;
-    padding: 1.25rem;
-    background-color: #ffffff;
+    padding: 1.25rem 2.5rem ;
+    background-color: var(--background-color);
     border-radius: 1.25rem;
 }
 
@@ -201,13 +209,14 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
-    color: #333;
+    color: var(--text-color);
 }
 
 .recent-activity-title i {
     font-size: 1.5rem;
     margin-right: 0.625rem;
     color: #515151;
+    
 }
 
 table {
@@ -223,7 +232,7 @@ th, td {
 }
 
 th {
-    background-color: #ffffff;
+    background-color: var(--background-color);
     font-weight: bold;
 }
 
