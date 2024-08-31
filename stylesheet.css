@@ -51,8 +51,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%; 
-    font-weight: bold;
-    margin-right: 1rem; 
+    font-weight: bold; 
     font-size: 1.125rem; 
 }
 
@@ -60,6 +59,7 @@ body {
     font-size: 1.375rem;
     font-weight: bold;
     color: #333;
+    margin-left: 1rem;
 }
 
 .menu ul {
@@ -98,6 +98,113 @@ body {
 
 .logout, .dark-mode {
     margin-top: 1.25rem;
+}
+
+/* -------reposive----- */
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 18rem;
+    }
+
+    .company-name {
+        margin-left: 0.5rem;
+    }
+
+    .menu ul li a, .bottom-menu a {
+        font-size: 1rem;
+    }
+}
+
+/* Landscape phones */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 15rem;
+    }
+
+    .company-name {
+        font-size: 1.125rem;
+    }
+
+    .menu ul li a, .bottom-menu a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Portrait phones */
+@media (max-width: 576px) {
+    .sidebar {
+        width: 5rem;
+        padding: 1rem;
+    }
+
+    .company {
+        justify-content: center;
+    }
+
+    .company-name {
+        display: none; /* Hide company name */
+    }
+
+    .menu ul li a {
+        justify-content: center;
+    }
+
+    .menu ul li a div {
+        display: none; /* Hide menu text */
+    }
+
+    .bottom-menu a {
+        justify-content: center;
+    }
+    
+    .logout div{
+        display: none;
+    }
+    .dark-mode div{
+        display: none;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 400px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        padding: 0.5rem; 
+    }
+
+    .company-logo {
+        width: 2.5rem; 
+        height: 2.5rem;
+    }
+
+    .menu ul li {
+        margin-bottom: 1rem; 
+    }
+
+    .menu ul li a i, .bottom-menu a i {
+        font-size: 1rem; 
+    }
+
+    .bottom-menu {
+        margin-top: 0.5rem; 
+    }
+
+    /* Toggle button */
+    .toggle-sidebar {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        border: none;
+        padding: 0.25rem 0.5rem; 
+        z-index: 200;
+        font-size: 0.875rem; 
+    }
 }
 
 /*----- topbar -------*/
