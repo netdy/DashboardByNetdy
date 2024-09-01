@@ -245,8 +245,9 @@ main {
     font-family: Arial, sans-serif;
     width: 100%;
     margin: 0;
-    padding: 2rem 2rem; 
+    padding: 2rem;
     background-color: var(--background-color);
+    box-sizing: border-box;
 }
 
 .dashboard-title {
@@ -268,7 +269,7 @@ main {
     align-items: center;
     width: 32px;
     height: 32px;
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
     color: white;
     border-radius: 8px;
     font-size: 18px;
@@ -277,16 +278,18 @@ main {
 
 .dashboard-items {
     display: flex;
-    justify-content: space-between;
-    gap: 1.5rem; 
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .dashboard-item {
     background-color: var(--secondary-color);
-    flex: 1;
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 200px;
     padding: 2.5rem;
     border-radius: 0.75rem;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .dashboard-item-icon {
@@ -309,8 +312,16 @@ main {
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
+    .dashboard-items {
+        justify-content: flex-start;
+    }
     .dashboard-item {
         flex: 1 1 calc(50% - 0.75rem);
+        max-width: calc(50% - 0.75rem);
+    }
+    .dashboard-item:last-child {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 
@@ -318,15 +329,10 @@ main {
     .dashboard {
         padding: 1.5rem;
     }
-
-    .dashboard-items {
-        flex-direction: column;
-    }
-
     .dashboard-item {
         flex: 1 1 100%;
+        max-width: 100%;
     }
-
     .dashboard-item-value {
         font-size: 2rem;
     }
@@ -336,15 +342,12 @@ main {
     .dashboard {
         padding: 1rem;
     }
-
     .dashboard-title h2 {
         font-size: 1.25rem;
     }
-
     .dashboard-item {
         padding: 1.5rem;
     }
-
     .dashboard-item-value {
         font-size: 1.75rem;
     }
