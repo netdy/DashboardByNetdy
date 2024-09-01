@@ -7,7 +7,7 @@
 }
 
 html {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 * {
@@ -23,7 +23,7 @@ body {
 
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -34,8 +34,17 @@ body {
     flex-direction: column;
     box-shadow: 0.125rem 0 0.3125rem rgba(0, 0, 0, 0.1);
     z-index: 100;
+    transition: width 0.3s ease;
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: calc(100% - var(--sidebar-width));
+    transition: width 0.3s ease;
+}
 .company {
     display: flex;
     align-items: center;
@@ -192,30 +201,16 @@ body {
     .bottom-menu {
         margin-top: 0.5rem; 
     }
-
-    /* Toggle button */
-    .toggle-sidebar {
-        position: absolute;
-        top: 0.5rem;
-        left: 0.5rem;
-        background-color: var(--primary-color);
-        color: var(--background-color);
-        border: none;
-        padding: 0.25rem 0.5rem; 
-        z-index: 200;
-        font-size: 0.875rem; 
-    }
 }
 
 /*----- topbar -------*/
 
 .topbar {
-    width: calc(100vw - var(--sidebar-width));
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1.875rem;
+    padding: 0.25rem 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -226,13 +221,22 @@ body {
     border-radius: 0.25rem;
     outline: none;
     font-size: 1rem;
-    margin-right: 1.25rem;
+    margin: 0 1rem;
+    width: 100%;
+    max-width: 900px; 
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        max-width: 100%;
+        margin: 0 0.5rem;
+    }
 }
 
 .profile-pic img {
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 /* -----------------DashBoard--------------------- */
