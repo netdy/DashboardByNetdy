@@ -1,6 +1,6 @@
 :root {
     --primary-color: #b52a3a;
-    --secondary-color: #e3ffff;
+    --secondary-color: #f8e3ff;
     --text-color: #333;
     --background-color: #ffffff;
     --sidebar-width: 21rem;
@@ -223,7 +223,7 @@ main {
     font-size: 1rem;
     margin: 0 1rem;
     width: 100%;
-    max-width: 900px; 
+    max-width: 100%; 
 }
 
 @media (max-width: 768px) {
@@ -243,16 +243,16 @@ main {
 
 .dashboard {
     font-family: Arial, sans-serif;
-    max-width: 100vm;
-    margin: 1.25rem auto;
-    padding: 1.25rem 2.5rem ;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 2rem; /* Increased horizontal padding */
     background-color: var(--background-color);
 }
 
 .dashboard-title {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .dashboard-title h2 {
@@ -263,39 +263,47 @@ main {
 }
 
 .dashboard-title i {
-    font-size: 1.5rem;
-    margin-right: 0.625rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-color); /* Using the specified primary color */
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-right: 12px;
 }
 
 .dashboard-items {
     display: flex;
     justify-content: space-between;
-    gap: 1.25rem;
+    gap: 1.5rem; 
 }
 
 .dashboard-item {
     background-color: var(--secondary-color);
     flex: 1;
-    padding: 1.25rem;
-    border-radius: 1.25rem;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
     text-align: center;
 }
 
 .dashboard-item-icon {
-    font-size: 2rem;
-    margin-bottom: 0.625rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
     color: #515151;
 }
 
 .dashboard-item-title {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #666;
-    margin-bottom: 0.325rem;
+    margin-bottom: 0.5rem;
 }
 
 .dashboard-item-value {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     color: var(--text-color);
 }
 
@@ -303,17 +311,17 @@ main {
 
 .recent-activity {
     font-family: Arial, sans-serif;
-    max-width: 100vm;
-    margin: 1.25rem auto;
-    padding: 1.25rem 2.5rem ;
+    width: 100%;
+    margin: 1.5rem 0 0;
+    padding: 1.5rem 2rem; /* Increased horizontal padding */
     background-color: var(--background-color);
-    border-radius: 1.25rem;
+    border-radius: 0.75rem;
 }
 
 .recent-activity-title {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .recent-activity-title h2 {
@@ -324,10 +332,16 @@ main {
 }
 
 .recent-activity-title i {
-    font-size: 1.5rem;
-    margin-right: 0.625rem;
-    color: #515151;
-    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-color); /* Using the specified primary color */
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-right: 12px;
 }
 
 table {
@@ -336,15 +350,12 @@ table {
 }
 
 th, td {
-    font: 1.5rem ;
+    font-size: 1rem;
     text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+    padding: 0.75rem 1rem; /* Increased horizontal padding */
 }
 
 th {
     background-color: var(--background-color);
     font-weight: bold;
 }
-
-
