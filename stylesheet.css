@@ -307,6 +307,49 @@ main {
     color: var(--text-color);
 }
 
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .dashboard-item {
+        flex: 1 1 calc(50% - 0.75rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 1.5rem;
+    }
+
+    .dashboard-items {
+        flex-direction: column;
+    }
+
+    .dashboard-item {
+        flex: 1 1 100%;
+    }
+
+    .dashboard-item-value {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        padding: 1rem;
+    }
+
+    .dashboard-title h2 {
+        font-size: 1.25rem;
+    }
+
+    .dashboard-item {
+        padding: 1.5rem;
+    }
+
+    .dashboard-item-value {
+        font-size: 1.75rem;
+    }
+}
+
 /*----- Recent Activity -------*/
 
 .recent-activity {
