@@ -64,11 +64,9 @@ main {
     border-radius: 50%;
     font-weight: bold;
     font-size: 1.5rem;
-    transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: -1px;
     margin-right: 1rem;
-
 }
 
 .company-logo:hover {
@@ -120,100 +118,6 @@ main {
     margin-top: 1.25rem;
 }
 
-/* -------reposive----- */
-
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 18rem;
-    }
-
-    .company-name {
-        margin-left: 0.5rem;
-    }
-
-    .menu ul li a, .bottom-menu a {
-        font-size: 1rem;
-    }
-}
-
-/* Landscape phones */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 15rem;
-    }
-
-    .company-name {
-        font-size: 1.125rem;
-    }
-
-    .menu ul li a, .bottom-menu a {
-        font-size: 0.9rem;
-    }
-}
-
-/* Portrait phones */
-@media (max-width: 576px) {
-    .sidebar {
-        width: 5rem;
-        padding: 1rem;
-    }
-
-    .company {
-        justify-content: center;
-    }
-
-    .company-name {
-        display: none; 
-    }
-
-    .menu ul li a {
-        justify-content: center;
-    }
-
-    .menu ul li a div {
-        display: none; 
-    }
-
-    .bottom-menu a {
-        justify-content: center;
-    }
-    
-    .logout div{
-        display: none;
-    }
-    .dark-mode div{
-        display: none;
-    }
-}
-
-/* Very small devices */
-@media (max-width: 400px) {
-    .sidebar {
-        transform: translateX(-100%);
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        padding: 0.5rem; 
-    }
-
-    .company-logo {
-        width: 2.5rem; 
-        height: 2.5rem;
-    }
-
-    .menu ul li {
-        margin-bottom: 1rem; 
-    }
-
-    .menu ul li a i, .bottom-menu a i {
-        font-size: 1rem; 
-    }
-
-    .bottom-menu {
-        margin-top: 0.5rem; 
-    }
-}
-
 /*----- topbar -------*/
 
 .topbar {
@@ -235,13 +139,6 @@ main {
     margin: 0 1rem;
     width: 100%;
     max-width: 100%; 
-}
-
-@media (max-width: 768px) {
-    .search-bar {
-        max-width: 100%;
-        margin: 0 0.5rem;
-    }
 }
 
 .profile-pic img {
@@ -321,49 +218,6 @@ main {
     color: var(--text-color);
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .dashboard-items {
-        justify-content: flex-start;
-    }
-    .dashboard-item {
-        flex: 1 1 calc(50% - 0.75rem);
-        max-width: calc(50% - 0.75rem);
-    }
-    .dashboard-item:last-child {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .dashboard {
-        padding: 1.5rem;
-    }
-    .dashboard-item {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    .dashboard-item-value {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .dashboard {
-        padding: 1rem;
-    }
-    .dashboard-title h2 {
-        font-size: 1.25rem;
-    }
-    .dashboard-item {
-        padding: 1.5rem;
-    }
-    .dashboard-item-value {
-        font-size: 1.75rem;
-    }
-}
-
 /*----- Recent Activity -------*/
 
 .recent-activity {
@@ -423,82 +277,14 @@ th {
     font-weight: bold;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .recent-activity {
-        padding: 1rem;
-    }
-
-    .recent-activity-title h2 {
-        font-size: 1.25rem;
-    }
-
-    th, td {
-        font-size: 0.9rem;
-        padding: 0.5rem 0.75rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .recent-activity-title {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .recent-activity-title i {
-        margin-bottom: 0.5rem;
-    }
-
-    th, td {
-        font-size: 0.8rem;
-        padding: 0.5rem;
-    }
-}
-
-
 /* ------------------------------ new feat ------------------------ */
 
 .sidebar.collapsed {
-    width: 5rem;
-}
-
-.sidebar.collapsed .company-name,
-.sidebar.collapsed .menu ul li a div,
-.sidebar.collapsed .bottom-menu a div {
     display: none;
+    transition: width 0.3s ease;
+    transition-duration: 500ms;
 }
-
-.sidebar.collapsed .menu ul li a,
-.sidebar.collapsed .bottom-menu a {
-    justify-content: center;
-}
-
-.sidebar.collapsed .company-logo {
-    margin: 0;
-}
-
 
 main.expanded {
-    width: calc(100% - 5rem);
-}
-
-@media (max-width: 768px) {
-    .sidebar:not(.collapsed) {
-        width: var(--sidebar-width);
-    }
-
-    .sidebar:not(.collapsed) .company-name,
-    .sidebar:not(.collapsed) .menu ul li a div,
-    .sidebar:not(.collapsed) .bottom-menu a div {
-        display: block;
-    }
-
-    .sidebar:not(.collapsed) .menu ul li a,
-    .sidebar:not(.collapsed) .bottom-menu a {
-        justify-content: flex-start;
-    }
-
-    main:not(.expanded) {
-        width: calc(100% - var(--sidebar-width));
-    }
+    width: 100%;
 }
