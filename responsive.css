@@ -115,30 +115,3 @@
         padding: 0.5rem;
     }
 }
-
-@media (max-width: 400px) {
-    .sidebar {
-        transform: translateX(-100%);
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        padding: 0.5rem; 
-    }
-
-    .company-logo {
-        width: 2.5rem; 
-        height: 2.5rem;
-    }
-
-    .menu ul li {
-        margin-bottom: 1rem; 
-    }
-
-    .menu ul li a i, .bottom-menu a i {
-        font-size: 1rem; 
-    }
-
-    .bottom-menu {
-        margin-top: 0.5rem; 
-    }
-}
