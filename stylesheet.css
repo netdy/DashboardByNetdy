@@ -114,7 +114,12 @@ main {
     flex-direction: column;
 }
 
-.logout, .dark-mode {
+.logout{
+    margin-top: 1.25rem;
+    padding-top:1rem ;
+    border-top: #333 solid 1px;
+}
+.dark-mode {
     margin-top: 1.25rem;
 }
 
