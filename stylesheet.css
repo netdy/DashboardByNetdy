@@ -34,7 +34,6 @@ body {
     flex-direction: column;
     box-shadow: 0.125rem 0 0.3125rem rgba(0, 0, 0, 0.1);
     z-index: 100;
-    transition: width 0.3s ease;
 }
 
 main {
@@ -43,7 +42,6 @@ main {
     flex-direction: column;
     overflow-x: hidden;
     width: calc(100% - var(--sidebar-width));
-    transition: width 0.3s ease;
 }
 
 .company {
@@ -93,7 +91,6 @@ main {
     color: #555;
     display: flex;
     align-items: center;
-    transition: color 0.3s;
     font-size: 1.1rem; 
 }
 
@@ -281,8 +278,6 @@ th {
 
 .sidebar.collapsed {
     display: none;
-    transition: width 0.3s ease;
-    transition-duration: 500ms;
 }
 
 main.expanded {
