@@ -234,7 +234,7 @@ main {
 .recent-activity {
     font-family: Arial, sans-serif;
     width: 100%;
-    margin: 1.5rem 0 0;
+    /* margin: 1.5rem 0 0; */
     padding: 1.5rem 2rem;
     background-color: var(--background-color);
     border-radius: 0.75rem;
